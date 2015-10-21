@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/templates/plantillaBase.xhtml">
+        <ui:define name="tituloNavegador">Monitoreo WSN - ESPOCH - MAGAP</ui:define>
+        <ui:define name="content">
+            <h:form id="frmIndex">
+                <p:panel id="imagen" header="SISTEMA DE MONITOREO 6LoWPAN (SM6)"  style="margin-bottom:20px" >
+                    <h:panelGrid cellpadding="0" cellspacing="0">
+                        <p:galleria value="#{nodo1Controlador2.images}" var="image" panelWidth="820" panelHeight="413" showCaption="false" effectSpeed="5">
+                            <p:graphicImage value="/resources/images/magap/#{image}" alt="WSN-ESPOCH-MAGAP #{image}" title="#{image}"/>
+                        </p:galleria>
+
+                    </h:panelGrid>
+                </p:panel>
+
+                <p:panel id="basic" header="DETALLES DEL SISTEMA"  style="margin-bottom:20px">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <!--<p:graphicImage name="demo/images/godfather/godfather1.jpg" />-->
+                        <h:outputText
+                            value="El Sistema de monitoreo 6LoWPAN permite consultar los datos provenientes de la red de sensores como: humedad de suelo, temperatura y humedad relativa para luego ser analizados y tomar oportunas decisiones." />
+                    </h:panelGrid>
+                </p:panel>
+                <p:panel id="basic1" header="6LoWPAN " style="margin-bottom:20px">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <!--<p:graphicImage name="demo/images/godfather/godfather1.jpg" />-->
+                        <h:outputText
+                            value="Estándar que habilita el uso eficiente de IPV6 sobre dispositivos embebidos de bajo consumo y velocidad que forman parte de una red inalámbrica, esto a través de una capa de adaptación y la optimización de sus protocolos." />
+                    </h:panelGrid>
+                </p:panel>
+                <p:panel id="basic2" header="Riego por Goteo" style="margin-bottom:20px">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <!--<p:graphicImage name="demo/images/godfather/godfather1.jpg" />-->
+                        <h:outputText
+                            value="Suministra a la raíz de cada planta, a intervalos frecuentes, la misma cantidad de agua  a través de mangueras instaladas cerca de la zona radicular de las plantas. Su diseñado adecuadamente reduce el contacto del agua
+                            con el follaje, los tallos y los frutos logrando así, un mejor control del suelo, ahorro de agua, rendimiento de los cultivos sin erosionar el suelo ni perder nutrientes." />
+                    </h:panelGrid>
+                </p:panel>  
+
+
+            </h:form>           
+        </ui:define>
+    </ui:composition>
+</html>
+
